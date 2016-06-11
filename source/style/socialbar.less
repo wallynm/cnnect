@@ -1,0 +1,130 @@
+#app_mainView_socialBar {
+  .moon-header{
+    display: none;
+  }
+}
+
+.social-bar{
+  .moon-panel-viewport{
+    background: fade(@baseGray, 70%);
+  }
+}
+
+
+
+.social-button {
+  position: relative;
+  color: @disabledGray;
+  top: -80px;
+  height: 110px;
+  font-size: 40px;
+  padding: 30px;
+  margin-left: -15px;
+  width: 110%;
+  .rotate(-8deg);
+
+  // Aplica a anima
+  background: linear-gradient(278deg, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 1%);
+  animation: menuItemHide .3s ease-in-out;
+  background-size: 200% 200%;
+  animation-fill-mode: forwards;
+
+   &.selected {
+    background-size: 195% 200% !important;
+   }
+
+  &.spotlight, &.selected {
+    background: linear-gradient(278deg, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 1%);
+    animation: menuItemShow .3s ease-in-out;
+    background-size: 200% 200%;
+    animation-fill-mode: forwards;
+
+    .unlink-svg{
+      fill: #FFF;
+    }
+  }
+
+  &.connected{
+    color: #FFF;
+    .unlink-svg{
+      display: none;
+    }
+
+    &.facebook-button {
+      background-color: #3b5998;
+    }
+    &.google-button {
+      background-color: #d62d20;
+    }
+    &.flickr-button{
+      background-color: #FF0084;
+    }
+  }
+  &.config-button {
+    background-color: #424242;
+  }
+}
+
+
+.button-social-fb {
+  font-size: 40px;
+
+  .moon-image {
+    margin: 0px;
+  }
+}
+
+.unlink-svg{
+  float: left;
+  margin-right: 20px;
+  margin-top: 4px;
+  fill: @disabledGray;
+}
+
+.particle1, .particle2, .particle3{
+  opacity: 1;
+  transition-property: opacity;
+  transition-timing-function: ease-in;
+  transition-duration: .3s;
+}
+.unlink-top, .unlink-bottom{
+  transform: rotate(-4deg);
+  transform-origin: 18% 50%;
+  transition: transform .2s ease-in;
+}
+
+.unlink-over{
+  .unlink-particles{
+    .particle1{
+      opacity: 0;
+      transition-duration: .6s;
+    }
+    .particle2{
+      opacity: 0;
+      transition-duration: .4s;
+    }
+
+    .particle3{
+      opacity: 0;
+      transition-duration: .3s;
+    }
+  }
+  .unlink-top{
+    transform: rotate(-18deg) translate(-5px, 3px);
+  }
+  .unlink-bottom{
+    transform: rotate(0deg) translate(2px, -4px);
+  }
+}
+
+// Animacoes de posicionamento do menu do usuairo, 
+// quanto de volta
+@keyframes menuItemShow { 
+  0%{background-position:0% 100%}
+  100%{background-position:100% 100%}
+}
+
+@keyframes menuItemHide { 
+  0%{background-position:100% 100%}
+  100%{background-position:0% 100%}
+}

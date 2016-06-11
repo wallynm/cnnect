@@ -1,0 +1,168 @@
+
+/* source/style/import.less */
+
+.photos-counter,
+.photos-counter-background {
+  position: absolute;
+  top: 0px;
+  left: -10px;
+  text-align: center;
+  color: #FFF;
+  display: none;
+}
+.photos-counter-background {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 70px 70px 0 0;
+  border-color: #ef3b0a transparent transparent transparent;
+}
+.spotlight .photos-counter,
+.spotlight .photos-counter-background {
+  display: block;
+}
+.moon-button.active,
+.moon-button.pressed,
+.moon-button.spotlight.pressed,
+.moon-button.spotlight:active {
+  border-color: #ef3b0a !important;
+}
+.moon-button.contextual-popup-button:after,
+.moon-button.contextual-popup-button.pressed:after,
+.moon-button.contextual-popup-button:active:after {
+  color: #ef3b0a;
+}
+.moon-formcheckbox-item.spotlight .moon-checkbox {
+  background-color: #ef3b0a;
+}
+.moon-gridlist-imageitem.spotlight {
+  border-color: #ef3b0a;
+  background-color: #ef3b0a;
+}
+.moon-gridlist-imageitem.spotlight:before {
+  background-color: #ef3b0a;
+}
+.moon-button.spotlight {
+  background-color: #ef3b0a;
+}
+.moon-panels-handle.spotlight:before {
+  background-color: #ef3b0a;
+}
+#app_mainView_socialBar .moon-header {
+  display: none;
+}
+.social-bar .moon-panel-viewport {
+  background: rgba(66, 66, 66, 0.7);
+}
+.social-button {
+  position: relative;
+  color: #868686;
+  top: -80px;
+  height: 110px;
+  font-size: 40px;
+  padding: 30px;
+  margin-left: -15px;
+  width: 110%;
+  -webkit-transform: rotate(-8deg);
+  -moz-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  -o-transform: rotate(-8deg);
+  background: linear-gradient(278deg, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 1%);
+  animation: menuItemHide 0.3s ease-in-out;
+  background-size: 200% 200%;
+  animation-fill-mode: forwards;
+}
+.social-button.selected {
+  background-size: 195% 200% !important;
+}
+.social-button.spotlight,
+.social-button.selected {
+  background: linear-gradient(278deg, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0) 1%);
+  animation: menuItemShow 0.3s ease-in-out;
+  background-size: 200% 200%;
+  animation-fill-mode: forwards;
+}
+.social-button.spotlight .unlink-svg,
+.social-button.selected .unlink-svg {
+  fill: #FFF;
+}
+.social-button.connected {
+  color: #FFF;
+}
+.social-button.connected .unlink-svg {
+  display: none;
+}
+.social-button.connected.facebook-button {
+  background-color: #3b5998;
+}
+.social-button.connected.google-button {
+  background-color: #d62d20;
+}
+.social-button.connected.flickr-button {
+  background-color: #FF0084;
+}
+.social-button.config-button {
+  background-color: #424242;
+}
+.button-social-fb {
+  font-size: 40px;
+}
+.button-social-fb .moon-image {
+  margin: 0px;
+}
+.unlink-svg {
+  float: left;
+  margin-right: 20px;
+  margin-top: 4px;
+  fill: #868686;
+}
+.particle1,
+.particle2,
+.particle3 {
+  opacity: 1;
+  transition-property: opacity;
+  transition-timing-function: ease-in;
+  transition-duration: .3s;
+}
+.unlink-top,
+.unlink-bottom {
+  transform: rotate(-4deg);
+  transform-origin: 18% 50%;
+  transition: transform 0.2s ease-in;
+}
+.unlink-over .unlink-particles .particle1 {
+  opacity: 0;
+  transition-duration: .6s;
+}
+.unlink-over .unlink-particles .particle2 {
+  opacity: 0;
+  transition-duration: .4s;
+}
+.unlink-over .unlink-particles .particle3 {
+  opacity: 0;
+  transition-duration: .3s;
+}
+.unlink-over .unlink-top {
+  transform: rotate(-18deg) translate(-5px, 3px);
+}
+.unlink-over .unlink-bottom {
+  transform: rotate(0deg) translate(2px, -4px);
+}
+@keyframes menuItemShow {
+  0% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+@keyframes menuItemHide {
+  0% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
+

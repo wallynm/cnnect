@@ -1,0 +1,10 @@
+enyo.depends(
+  'facebook/source.js',
+  'facebook/photoCollection.js',
+  'facebook/photoModel.js',
+  'facebook/API.js',
+  'google/API.js',
+  'twitter/API.js',
+  'flickr/data.js',
+  'localstorage.js'
+);

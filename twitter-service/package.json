@@ -1,0 +1,11 @@
+{
+  "name": "twitter.com.connect.app.service",
+  "version": "1.0.0",
+  "description": "Twitter API",
+  "main": "webos_service.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "wally.nm@gmail.com",
+  "license": "BSD"
+}
